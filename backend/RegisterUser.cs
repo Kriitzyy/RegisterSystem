@@ -24,7 +24,6 @@ public static class RegisterVisitor
             return new BadRequestObjectResult("Name is required");
         }
 
-        // LOGGA (Application Insights sker automatiskt via log.LogInformation)
         log.LogInformation($"Visitor registered: {data.Name}");
 
         return new OkObjectResult("Visitor saved");

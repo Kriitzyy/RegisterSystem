@@ -7,7 +7,7 @@ async function register() {
     }
 
     try {
-        const response = await fetch("system-function-bggcfsguera8f8de.canadacentral-01.azurewebsites.net/api/registerVisitor", {
+        const response = await fetch("http://localhost:7071/api/registerVisitor", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
