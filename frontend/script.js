@@ -15,11 +15,15 @@ async function register() {
             body: JSON.stringify({ name: name })
         });
 
+        const text = await response.text();
+        console.log("Response:", text);
+
         if (response.ok) {
             alert("Visitor registered!");
         } else {
-            alert("Something went wrong");
+            alert("Error: " + text); 
         }
+
     } catch (error) {
         console.error(error);
         alert("Error connecting to server");
